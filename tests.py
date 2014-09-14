@@ -13,6 +13,8 @@ settings.configure(**{
 })
 from django.core.mail import send_mail
 
+
 class TestEmailRedirect(unittest.TestCase):
     def test_redirect_email(self):
-        send_mail('Test redirect', 'Testing', 'from@example.com', ['to@example.com'])
+        send_mail('Test redirect', 'Testing',
+                  'from@example.com', ['to@example.com'])
